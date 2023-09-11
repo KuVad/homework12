@@ -8,9 +8,11 @@ count = int(input("Введите количество элементов в п�
 
 mass = [num]
 
-an = num + (count-1) * diff
-for i in range(num, an, diff):
-    num += diff
-    mass.append(num)
+def progress(a, n, d):
+    an = a + (n - 1) * d
+    for i in range(a, an, d):
+        a += d
+        mass.append(a)
+    return mass
 
-print(mass)
+print(progress(num, count, diff))

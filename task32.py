@@ -17,9 +17,11 @@ limit_max = int(input("Введите максимальное число диа
 
 spisok = list()
 
-for i in range(len(list_num)):
-    if limit_min < list_num[i] < limit_max:
-        spisok.append(i)
-    i += 1
+def index_num(a, b, c):
+    for i in range(len(c)):
+        if a < c[i] < b:
+            spisok.append(i)
+        i += 1
+    return spisok
 
-print(spisok)
+print(index_num(limit_min, limit_max, list_num))
